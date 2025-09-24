@@ -180,7 +180,7 @@ variable "account_map_component_name" {
 
 variable "config_component_name" {
   type        = string
-  description = "The name of the aws config component (i.e., this component)"
+  description = "Deprecated. The name of the aws config component (i.e., this component). Use `global_collector_component_base_name` instead."
   default     = "aws-config"
 }
 
@@ -194,6 +194,12 @@ variable "team_roles_component_name" {
   type        = string
   description = "The name of the team-roles component"
   default     = "aws-team-roles"
+}
+
+variable "global_collector_component_base_name" {
+  type        = string
+  description = "The base name of the aws config global collector component, usually this component"
+  default     = "aws-config"
 }
 
 variable "global_collector_component_name_pattern" {
